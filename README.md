@@ -14,6 +14,10 @@ I used two years of online retail transactions to answer a simple question: **wh
 
 The high-value segment contains **1,225 of 5,249 customers (23.3%)** and accounts for **70.6% of positive purchase value** in the analysis period. The at-risk segment contains **568 customers** who bought several times but had not purchased recently as of 1 September 2011.
 
+![Customer share versus positive purchase value by RFM segment](rfm-segment-shares.png)
+
+*Chart from the notebook: high-value customers are 23.3% of customers and 70.6% of positive purchase value before 1 September 2011.*
+
 This is descriptive, not a measured campaign outcome. The high-value group is partly defined using spending, so its large purchase-value share is not an independent discovery. Returns and cancellations are excluded, so purchase value here is **not net revenue**.
 
 ## Notebook
@@ -21,6 +25,8 @@ This is descriptive, not a measured campaign outcome. The high-value group is pa
 Open [online-retail-ii-rfm.ipynb](online-retail-ii-rfm.ipynb). It includes the checks, code, output tables, chart, and short explanations of why each step was done.
 
 To rerun it on Kaggle, attach the [Online Retail II dataset](https://archive.ics.uci.edu/dataset/502/online+retail+ii) and update the file path in the first code cell if your Kaggle input path differs. The notebook expects an Excel file with the `Year 2009-2010` and `Year 2010-2011` sheets. The dataset itself is not stored in this repository.
+
+For local Jupyter, install the packages with `pip install -r requirements.txt`, then update `file = Path(...)` in the first code cell to point to your downloaded Excel file.
 
 The notebook sets aside later transactions as `future_raw`, but does **not** use them to evaluate the segments. I have not claimed a prediction or validation score.
 
